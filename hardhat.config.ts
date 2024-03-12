@@ -60,7 +60,8 @@ const config: HardhatUserConfig = {
     localgeth: { url: 'http://localgeth:8545' },
     goerli: getNetwork('goerli'),
     sepolia: getNetwork('sepolia'),
-    proxy: getNetwork1('http://localhost:8545')
+    proxy: getNetwork1('http://localhost:8545'),
+    botanix: getNetwork1('https://node.botanixlabs.dev')
   },
   mocha: {
     timeout: 10000
