@@ -48,7 +48,7 @@ library RsaVerifyOptimized {
         bytes memory _s,
         bytes memory _e,
         bytes memory _m
-    ) public view returns (bool) {
+    ) internal view returns (bool) {
         // decipher
         uint256 decipherlen = _m.length;
         if (decipherlen < 64) {

@@ -12,7 +12,7 @@ library JwtValidator {
 
     function getToken(
         bytes memory json
-    ) public pure returns (JwtTokenLib.Claims memory) {
+    ) internal pure returns (JwtTokenLib.Claims memory) {
         bytes memory email;
         bytes memory aud;
         bytes memory nonce;

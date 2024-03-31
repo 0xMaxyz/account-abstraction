@@ -1,36 +1,10 @@
-import { Wallet } from "ethers";
 import { ethers } from "hardhat";
-import { expect } from "chai";
 import {
-  ERC1967Proxy__factory,
   EntryPoint,
-  SimpleAccount,
-  SimpleAccountFactory__factory,
-  SimpleAccount__factory,
   SmartAccountFactory,
   SmartAccountFactory__factory,
-  TestCounter,
-  TestCounter__factory,
-  TestUtil,
-  TestUtil__factory,
 } from "../../typechain";
-import {
-  getBalance,
-  isDeployed,
-  ONE_ETH,
-  HashZero,
-  deployEntryPoint,
-  createAccount,
-} from "../testutils";
-import {
-  fillUserOpDefaults,
-  getUserOpHash,
-  encodeUserOp,
-  signUserOp,
-  packUserOp,
-} from "../UserOp";
-import { parseEther } from "ethers/lib/utils";
-import { UserOperation } from "../UserOperation";
+import { deployEntryPoint } from "../testutils";
 
 describe("Smart Account Tests", () => {
   const ens1 = ethers.utils.keccak256(ethers.utils.toUtf8Bytes("Max"));

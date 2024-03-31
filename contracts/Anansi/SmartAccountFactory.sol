@@ -30,7 +30,7 @@ contract SmartAccountFactory {
     mapping(uint256 => address) public ownerOf;
     error NameExists(uint256 name);
     error InvalidKey();
-    error InvalidToken();
+    error InvalidAuthToken();
     error InvalidAudience();
     error InvalidOperation();
 
@@ -81,7 +81,7 @@ contract SmartAccountFactory {
             }
         } else {
             // Revert for invalid token
-            revert InvalidToken();
+            revert InvalidAuthToken();
         }
     }
 
